@@ -7,4 +7,6 @@
 
 - permettre un tri chronologique
 
-Bonus : développez un système pour importer des évènements à partir d’une url ou d’un fichier .json
+TODO : développez un système pour importer des évènements à partir d’une url ou d’un fichier .json
+
+[en ligne](http://cjoly.fr/calendar/index.php)
