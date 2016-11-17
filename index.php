@@ -41,7 +41,12 @@
   ?>
 
 </div>
-
+<div class="liste">
+  <h2>Depuis un json</h2>
+<?php
+include_once 'json.php';
+ ?>
+</div>
 </div>
 </br>
   </body>
