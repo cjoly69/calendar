@@ -24,19 +24,22 @@
 
 
 <div class="liste">
+  <h2>Calendrier :</h2>
+
 <?php
 //requete pour la table saisie
-    $requete = "SELECT * FROM saisie";
+    $requete = "SELECT * FROM saisie order by debut desc";
 	  $resultats = $connexion->query($requete);
-    echo "<h2>Calendrier :</h2>";
 
 	while( $calendar = $resultats->fetch() ){
 		echo "<div>Titre : " . $calendar["titre"] . "</div>";
     echo "<div> Du " . $calendar["debut"] . " au " . $calendar["fin"] . " .</div>";
     echo "<div>Mail de l'auteur : " . $calendar["mail"] . "</div>";
+    echo "</br>";
     }
 	 $resultats->closeCursor();
   ?>
+
 </div>
 
 </div>
