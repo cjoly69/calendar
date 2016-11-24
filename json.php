@@ -9,7 +9,9 @@ $parsed_json = json_decode(file_get_contents("https://www.googleapis.com/calenda
 
 $titre = $parsed_json->items[0]->summary;
 $date_debut = $parsed_json->items[0]->start->dateTime;
+$date_debut = date('d-m-Y');
 $date_fin = $parsed_json->items[0]->end->dateTime;
+$date_fin = date('d-m-Y');
 $mail = $parsed_json->items[0]->creator->email;
 
 //affichage du premier objet

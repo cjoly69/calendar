@@ -5,6 +5,16 @@
     <title>calendrier</title>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   </head>
+  <style media="screen">
+    a{
+      width: 20px;
+      height: 20px;
+      border-color: silver;
+      text-decoration: none;
+      color : black;
+      font-weight: bold;
+    }
+  </style>
   <body>
 <h1>Nouveau rendez-vous :</h1>
     <!-- formulaire de saisie de données -->
@@ -35,6 +45,9 @@
 		echo "<div>Titre : " . $calendar["titre"] . "</div>";
     echo "<div> Du " . $calendar["debut"] . " au " . $calendar["fin"] . " .</div>";
     echo "<div>Mail de l'auteur : " . $calendar["mail"] . "</div>";
+    echo '<a href="erase.php?id='.$calendar["idcrea"].'" style = "color:red;">SUPPRIMER </a>';
+    echo '<a href="modif.php?id='.$calendar["idcrea"].'"style = "color:green;"> MODIFIER</a>';
+
     echo "</br>";
     }
 	 $resultats->closeCursor();
