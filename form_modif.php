@@ -9,6 +9,7 @@
      </head>
      <body>
           <form action="submitModif.php" method="post">
+            <!-- //  -->
                <input type="hidden" name="id" value="<?php echo $_GET['id']?>">
                <input type="texte" id="titre" name="titre" placeholder="titre">
                <input type="date" id="debut" name="debut" placeholder="debut">

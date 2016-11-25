@@ -46,7 +46,8 @@
     echo "<div> Du " . $calendar["debut"] . " au " . $calendar["fin"] . " .</div>";
     echo "<div>Mail de l'auteur : " . $calendar["mail"] . "</div>";
     echo '<a href="erase.php?id='.$calendar["idcrea"].'" style = "color:red;">SUPPRIMER </a>';
-    echo '<a href="modif.php?id='.$calendar["idcrea"].'"style = "color:green;"> MODIFIER</a>';
+    echo $calendar["idcrea"];
+    echo '<a href="form_modif.php?id='.$calendar["idcrea"].'"style = "color:green;"> MODIFIER</a>';
 
     echo "</br>";
     }

@@ -5,6 +5,7 @@ $connexion = new PDO('mysql:host=localhost; dbname=calendrier;charset=utf8','roo
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
+    echo $id;
     if(is_numeric($id)){
         $select = "SELECT titre, debut, fin, mail FROM saisie WHERE idcrea = :id";
         $rq = $connexion->prepare($select);
@@ -14,5 +15,4 @@ if(isset($_GET['id'])){
     }
 }
 header('location:form_modif.php');
-mysql_close();
  ?>
