@@ -1,6 +1,6 @@
 <?php
 $id = $_GET['id'];
-$connexion = new PDO('mysql:host=localhost; dbname=calendrier;charset=utf8','root','');
+$connexion = new PDO('mysql:host=;dbname=;charset=utf8', '', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
 if(isset($_GET['id'])){

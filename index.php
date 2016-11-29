@@ -27,7 +27,7 @@
         </form>
 
     <?php
-    $connexion = new PDO('mysql:host=localhost;dbname=calendrier;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $connexion = new PDO('mysql:host=;dbname=;charset=utf8', '', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     ?>
 
 <div >
@@ -46,7 +46,7 @@
     echo "<div> Du " . $calendar["debut"] . " au " . $calendar["fin"] . " .</div>";
     echo "<div>Mail de l'auteur : " . $calendar["mail"] . "</div>";
     echo '<a href="erase.php?id='.$calendar["idcrea"].'" style = "color:red;">SUPPRIMER </a>';
-    echo $calendar["idcrea"];
+    // echo $calendar["idcrea"];
     echo '<a href="form_modif.php?id='.$calendar["idcrea"].'"style = "color:green;"> MODIFIER</a>';
 
     echo "</br>";
@@ -56,7 +56,7 @@
 
 </div>
 <div class="liste">
-  <h2>Depuis un json</h2>
+  <h2>Depuis un fichier google calendar et json</h2>
 <?php
 include_once 'json.php';
  ?>

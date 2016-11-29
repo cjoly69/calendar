@@ -5,7 +5,7 @@ $debut = $_POST['debut'];
 $fin = $_POST['fin'];
 $mail = $_POST['mail'];
 
-$connexion = new PDO('mysql:host=localhost; dbname=calendrier;charset=utf8','root','');
+$connexion = new PDO('mysql:host=;dbname=;charset=utf8', '', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 //
 if (isset($_POST['titre']) !='' || $_POST['titre']
   && isset($_POST['debut']) !='' || $_POST['debut']
@@ -13,7 +13,7 @@ if (isset($_POST['titre']) !='' || $_POST['titre']
   && isset($_POST['mail']) !='' || $_POST['mail']
   && isset($_POST['id']))
 {
-  print_r ($_POST);
+  // print_r ($_POST);
   //requète
 $update = "UPDATE `saisie` SET `titre`=:titre,`debut`=:debut,`fin`=:fin,`mail`= :mail WHERE idcrea =:id";
 $rq = $connexion->prepare($update);// update bdd
